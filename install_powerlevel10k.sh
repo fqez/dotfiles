@@ -3,9 +3,16 @@
 # 0. Install ZSH
 
 sudo apt update
-sudo apt install -y zsh
+sudo apt install -y zsh curl
 
 # 1. Install oh my zsh
+
+echo '###########################################################'
+echo '\n'
+echo 'Say YES to change default shell to zsh AND THEN HIT CTRL + D'
+echo '\n'
+echo '###########################################################'
+
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
