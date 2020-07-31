@@ -37,5 +37,5 @@ echo 'Now you can run "p10k configure" command or use the already custom theme'
 echo '\n'
 echo 'created alias for color ls: "lc"'
 
-echo "alias lc='colorls'" >> ~/.bashrc
+echo "alias lc='colorls'" >> ~/.zshrc
 
