@@ -23,7 +23,10 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 sudo apt install -y ruby ruby-dev ruby-colorize
 sudo gem install colorls
 
-echo 'Now you can run "p10k configure" command' 
+cp .p10k.zsh ~
+cp .zshrc ~
+
+echo 'Now you can run "p10k configure" command or use the already custom theme' 
 echo '\n'
 echo 'created alias for color ls: "lc"'
 
