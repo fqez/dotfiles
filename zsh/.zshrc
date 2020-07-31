@@ -8,6 +8,11 @@ fi
 # To fix parent dir autocompletion
 zstyle ':completion:*' special-dirs true
 
+# To enable arrow keys navigation when cd tab
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
