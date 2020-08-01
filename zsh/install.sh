@@ -40,7 +40,7 @@ echo 'created alias for color ls: "lc"'
 # 4. Install Pygments
 pip install Pygments
 
-echo "alias lc='colorls'" >> ~/.zshrc
-echo "alias ccat=pygmentize -g $1" >> ~/.zshrc
-echo "alias lccat='pygmentize -g -O style=colorful,linenos=1'" >> ~/.zshrc
+echo "alias ls='colorls'" >> ~/.zshrc
+echo "alias cat=pygmentize -g $1" >> ~/.zshrc
+echo "alias lcat='pygmentize -g -O style=colorful,linenos=1'" >> ~/.zshrc
 
