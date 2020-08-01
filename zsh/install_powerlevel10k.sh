@@ -37,5 +37,10 @@ echo 'Now you can run "p10k configure" command or use the already custom theme'
 echo '\n'
 echo 'created alias for color ls: "lc"'
 
+# 4. Install Pygments
+pip install Pygments
+
 echo "alias lc='colorls'" >> ~/.zshrc
+echo "alias ccat=pygmentize -g $1" >> ~/.zshrc
+echo "alias lccat='pygmentize -g -O style=colorful,linenos=1'" >> ~/.zshrc
 
