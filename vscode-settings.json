@@ -95,7 +95,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     // terminal configuration
     "terminal.integrated.defaultProfile.windows": "Custom Init",
-    "terminal.integrated.fontFamily": "Monaspace Neon Var",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
     "terminal.integrated.fontSize": 15,
     "terminal.integrated.profiles.windows": {
         "Custom Init": {
@@ -108,7 +108,7 @@
         }
     },
     //workbench config
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.activityBar.location": "top",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#ab307e",
@@ -131,5 +131,5 @@
     },
     "workbench.tree.indent": 16,
     "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "material-icon-theme"
 }
