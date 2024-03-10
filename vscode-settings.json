@@ -1,126 +1,135 @@
 {
-    "window.zoomLevel": 1,
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.profiles.windows": {
-        "Custom Init": {
-          "path": "pwsh.exe",
-          "args": [
-             "-noexit",
-             "-file",
-             "C:/Users/Francho/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1"
-          ]
-        }
-      },
-      "terminal.integrated.defaultProfile.windows": "Custom Init",
-
-      "java.compile.nullAnalysis.mode": "automatic",
-      "editor.fontFamily": "Monaspace Neon Var, Fira Code, Monaco, monospace",
-      "editor.fontVariations": "'wght' 350",
-      "editor.cursorSmoothCaretAnimation": "on",
-      "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
-      "editor.tokenColorCustomizations": {
-      "textMateRules": [
-          {
-            "scope": "comment",
-            "settings": { "fontStyle": "italic" }
-          },
-          {
-            "scope": "storage,entity,variable",
-            "settings": { "fontStyle": "" }
-          }
-        ]
-      },
-      "workbench.tree.indent": 12,
-      "workbench.colorCustomizations": {
-          "activityBar.activeBackground": "#ab307e",
-          "activityBar.background": "#ab307e",
-          "activityBar.foreground": "#e7e7e7",
-          "activityBar.inactiveForeground": "#e7e7e799",
-          "activityBarBadge.background": "#25320e",
-          "activityBarBadge.foreground": "#e7e7e7",
-          "commandCenter.border": "#e7e7e799",
-          "sash.hoverBorder": "#ab307e",
-          "statusBar.background": "#832561",
-          "statusBar.foreground": "#e7e7e7",
-          "statusBarItem.hoverBackground": "#ab307e",
-          "statusBarItem.remoteBackground": "#832561",
-          "statusBarItem.remoteForeground": "#e7e7e7",
-          "titleBar.activeBackground": "#832561",
-          "titleBar.activeForeground": "#e7e7e7",
-          "titleBar.inactiveBackground": "#83256199",
-          "titleBar.inactiveForeground": "#e7e7e799",
-          "terminal.foreground" : "#fdad00",
-          "terminal.background" : "#000000",
-      },
-      "peacock.color": "#832561",
-
-      // from: https://www.thewidlarzgroup.com/blog/pimp-your-vs-code
-          "editor.minimap.enabled": false,
-          "editor.gotoLocation.multipleReferences": "goto",
-          "editor.gotoLocation.multipleDefinitions": "goto",
-          "editor.gotoLocation.multipleDeclarations": "goto",
-          "editor.gotoLocation.multipleImplementations": "goto",
-          "editor.gotoLocation.multipleTypeDefinitions": "goto",
-          "explorer.openEditors.visible": 1,
-          "workbench.activityBar.location": "top",
-          "editor.quickSuggestionsDelay": 0,
-          "editor.suggestSelection": "first",
-          "editor.snippetSuggestions": "top",
-
-          "files.trimTrailingWhitespace": true,
-          "files.trimFinalNewlines": true,
-
-          "files.autoSave": "onFocusChange",
-
-          "editor.emptySelectionClipboard": false,
-          "editor.formatOnPaste": true,
-          "editor.formatOnSave": true,
-          "editor.formatOnType": true,
-
-          "search.exclude": {
-            // "**/everything-you-want-to-exclude": true,
-            "**/node_modules": true,
-            "**/.git": true,
-            "**/.pyc": true,
-            "**/.svn": true,
-            "**/.hg": true,
-            "**/CVS": true,
-            "**/.DS_Store": true,
-            "**/.gitignore": true,
-            "**/package-lock.json": true,
-            "**/yarn.lock": true
-          },
-          "editor.cursorBlinking": "phase",
-          "workbench.colorTheme": "Default Dark+",
-          "workbench.iconTheme": "vscode-icons",
-          "explorer.confirmDelete": false,
-          "security.workspace.trust.untrustedFiles": "open",
-
-      "[python]": {
-        "gitlens.codeLens.symbolScopes": [
-          "!Module"
-        ],
-        "editor.formatOnPaste": true,
-        "editor.formatOnSave": true,
+    // Python related configuration
+    "[python]": {
+        "diffEditor.ignoreTrimWhitespace": false,
         "editor.formatOnType": true,
-        "editor.rulers": [88, 120],
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.rulers": [
+            88,
+            120
+        ],
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.codeActionsOnSave": {
-          "source.organizeImports": "always",
-          "source.fixAll": "always"
-        },
-
-      },
-
-      "pylint.args": [
+            "source.fixAll": "always",
+            "source.organizeImports": "always"
+        }
+    },
+    "pylint.args": [
         "--disable=C0116",
         "--disable=C0111",
         "--disable=C0114"
-      ],
-      "explorer.confirmDragAndDrop": false,
-      "files.exclude": {
-        "**/__pycache__": true,
+    ],
+    // editor related configuration
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "Monaspace Neon Var, Fira Code, Monaco, monospace",
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
+    "editor.fontVariations": "'wght' 350",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true,
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    "editor.minimap.enabled": false,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage,entity,variable",
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    // explorer configurations
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 1,
+    // files configuration
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
         "**/.DS_Store": true,
-      }
-
+        "**/Thumbs.db": true,
+        "**/__pycache__": true,
+    },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    // copilot configuration
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    // search configuration
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.gitignore": true,
+        "**/.pyc": true,
+        "**/.svn": true,
+        "**/CVS": true,
+    },
+    //security configuration
+    "security.workspace.trust.untrustedFiles": "open",
+    // terminal configuration
+    "terminal.integrated.defaultProfile.windows": "Custom Init",
+    "terminal.integrated.fontFamily": "Monaspace Neon Var",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.profiles.windows": {
+        "Custom Init": {
+            "args": [
+                "-noexit",
+                "-file",
+                "C:/Users/Francho/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1"
+            ],
+            "path": "pwsh.exe"
+        }
+    },
+    //workbench config
+    "window.zoomLevel": 0,
+    "workbench.activityBar.location": "top",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ab307e",
+        "activityBar.background": "#ab307e",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#25320e",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#ab307e",
+        "statusBar.background": "#832561",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#ab307e",
+        "statusBarItem.remoteBackground": "#832561",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#832561",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#83256199",
+        "titleBar.inactiveForeground": "#e7e7e799",
+    },
+    "workbench.tree.indent": 16,
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.iconTheme": "material-icon-theme",
 }
