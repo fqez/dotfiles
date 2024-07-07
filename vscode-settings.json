@@ -10,22 +10,38 @@
             88,
             120
         ],
-        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.codeActionsOnSave": {
             "source.fixAll": "always",
-            "source.organizeImports": "always"
+            "source.organizeImports": "always",
+            "source.unusedImports": "always",
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "flake8.args": [
+        "--max-line-length=120"
+    ],
+    // Java related configuration
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always",
         }
     },
-    "pylint.args": [
-        "--disable=C0116",
-        "--disable=C0111",
-        "--disable=C0114"
+    "code-runner.executorMap": {
+        "python": "python -u $workspaceRoot/demo/main.py"
+    },
+    "editor.formatOnType": true,
+    "notebook.formatOnSave.enabled": true,
+    "isort.args": [
+        "--profile",
+        "black"
     ],
+    "code-runner.runInTerminal": true,
     // editor related configuration
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.emptySelectionClipboard": false,
-    "editor.fontFamily": "Monaspace Neon Var, Fira Code, Monaco, monospace",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'",
     "editor.fontVariations": "'wght' 350",
     "editor.formatOnPaste": true,
@@ -75,9 +91,10 @@
     // copilot configuration
     "github.copilot.enable": {
         "*": true,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
+        "plaintext": true,
+        "markdown": true,
+        "scminput": true,
+        "python": true,
     },
     // search configuration
     "search.exclude": {
@@ -107,8 +124,6 @@
             "path": "pwsh.exe"
         }
     },
-    //workbench config
-    "window.zoomLevel": 1,
     "workbench.activityBar.location": "top",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#ab307e",
@@ -128,8 +143,54 @@
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#83256199",
         "titleBar.inactiveForeground": "#e7e7e799",
+        "terminal.background": "#000000",
+        "outputView.background": "#000000",
+        "list.activeSelectionBackground": "#3276ff",
+        "list.inactiveSelectionBackground": "#3276ff",
+        "folderPathColor.custom1": "#FF4488",
+        "folderPathColor.custom2": "#88ff44",
+        "folderPathColor.custom3": "#4488FF",
+        "folderPathColor.custom4": "#44ecff",
+        "errorLens.errorBackground": "#9c0101",
+        "errorLens.errorForeground": "#d4ff00",
+        "errorLens.warningBackground": "#633f01",
+        "errorLens.warningForeground": "#eeff00"
     },
     "workbench.tree.indent": 16,
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.colorTheme": "Monokai Pirokai - Beach Sunset",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.associations": {
+        "*.qss": "css"
+    },
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.showExecutionMessage": false,
+    "redhat.telemetry.enabled": true,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.fontSize": 14,
+    "editor.detectIndentation": false,
+    "thunder-client.sidebar.layout": "compact",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "folder-path-color.folders": [
+        {
+            "path": "src/main/java/com/mapfre/health/nmc/specialities",
+            "symbol": "SR",
+            "tooltip": "Source files",
+            "color": "custom3"
+        },
+        {
+            "path": "src/main/java/com/mapfre/health/nmc/subspecialities",
+            "symbol": "T",
+            "tooltip": "Common",
+            "color": "custom2"
+        },
+        {
+            "path": "src/main/java/com/mapfre/health/nmc/shared",
+            "symbol": "T",
+            "tooltip": "Common",
+            "color": "custom4"
+        }
+    ]
 }
